@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "Analysis results"
+  navbar:
+    right:
+      - href: https://github.com/
+        text: Github repository
+        icon: github
+  sidebar:
+    contents:
+#sections get inserted above
+  
+number-sections: true
+    
+format:
+  html:
+    theme: cosmo
+    toc: true

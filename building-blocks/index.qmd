@@ -1,0 +1,7 @@
+---
+title: "Index of analysis pages"
+listing:
+  contents: []
+  categories: true
+  sort: filename
+---

@@ -1,0 +1,13 @@
+title: Default
+description: Default analysis
+categories: [Default, linear]
+params:
+  assay: raw
+  subset: true
+
+title: "Log, no outlier"
+description: Experiment with different settings 
+categories: [log]
+params:
+  assay: log
+  subset: '!is.na(outcome)'

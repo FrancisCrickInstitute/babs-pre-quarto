@@ -1,0 +1,45 @@
+---
+metadata-files:
+author: 
+  - name: me
+format:
+  html:
+    theme: cerulean
+    fontsize: 1.1em
+    linestretch: 1.7
+code-fold: true
+echo: false
+code-summary: "Show the code"
+params:
+
+---
+  
+
+# Introduction
+
+This has a `Down-stream.yml` file with three stanzas, so there should
+be two partner pages to this. I also inherit the global settings from
+`project.mk` but there are no `Down-stream`-specific settings in that
+file.
+
+
+
+We're using the following settings:
+
+```{r}
+#| label: load
+set.seed(1)
+
+knitr::opts_chunk$set(warning=FALSE, error=FALSE, message=FALSE,
+                      dev=c("ragg_png","pdf"), out.width="100%",
+                      fig.width=14, fig.height=10,
+                      results='asis', fig.cap=expression(fig_caption())
+                      )
+#| label: load2
+if (!isTRUE(getOption('knitr.in.progress'))) {
+  params <- yaml::read_yaml("{{YAML_FROM_MAKE}}")
+} else {
+  data.frame(Setting=names(params),
+                Value=unlist(params))
+}
+```

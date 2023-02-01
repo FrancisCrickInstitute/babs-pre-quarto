@@ -1,0 +1,44 @@
+---
+title: Metadata
+description: Overview of the various clinical and genetic metadata records across the samples.
+categories: [Metadata]
+author: 
+  - name: me
+format:
+  html:
+    theme: cerulean
+params:
+---
+  
+
+# Introduction
+
+This is a stand-alone file with no corresponding yml file so all its
+parameters will be inherited from the global and section-specific
+settings in `project.mk`. Also, there'll be no injection of metadata,
+so the `title` etc needs to be set in the preamble of this file itself.
+
+
+We're using the following settings:
+
+```{r}
+#| label: load
+set.seed(1)
+
+knitr::opts_chunk$set(warning=FALSE, error=FALSE, message=FALSE,
+                      dev=c("ragg_png","pdf"), out.width="100%",
+                      fig.width=14, fig.height=10,
+                      results='asis'
+                      )
+```
+
+
+```{r}
+#| label: load2
+if (!isTRUE(getOption('knitr.in.progress'))) {
+  params <- yaml::read_yaml("{{YAML_FROM_MAKE}}")
+} else {
+ data.frame(Setting=names(params),
+                Value=unlist(params))
+}
+```

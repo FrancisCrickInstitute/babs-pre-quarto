@@ -1,0 +1,23 @@
+title: Default
+description: Default down-stream analysis
+categories: [Default]
+params:
+  assay: raw
+  subset: true
+  alpha: 0.05
+
+title: Stringent
+description: Default down-stream analysis, but stricter p-value cutoff
+categories: [Default]
+params:
+  assay: raw
+  subset: true
+  alpha: 0.01
+
+title: "Log, no outlier"
+description: Log transform and remove outlier, but traditional p-value
+categories: [log]
+params:
+  assay: log
+  subset: '!is.na(outcome)'
+  alpha: 0.05
