@@ -1,5 +1,8 @@
 ## Pre-processor for parametrised quarto websites
 
+See [here for the renderer](https://franciscrickinstitute.github.io/babs-pre-quarto/)
+of the example that comes with the repository.
+
 I couldn't find a
 [Quarto-](https://github.com/quarto-dev/quarto-cli)native way to
 generate multiple pages on a website that all stem from a common
