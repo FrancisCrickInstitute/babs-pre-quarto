@@ -39,7 +39,7 @@
     "href": "index.html",
     "title": "Index of analysis pages",
     "section": "",
-    "text": "Default\n\n\n\n\n\n\n\nDefault\n\n\nlinear\n\n\n\n\nDefault analysis\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nLog, no outlier\n\n\n\n\n\n\n\nlog\n\n\n\n\nExperiment with different settings\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nDefault\n\n\n\n\n\n\n\nDefault\n\n\n\n\nDefault down-stream analysis\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nStringent\n\n\n\n\n\n\n\nDefault\n\n\n\n\nDefault down-stream analysis, but stricter p-value cutoff\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nLog, no outlier\n\n\n\n\n\n\n\nlog\n\n\n\n\nLog transform and remove outlier, but traditional p-value\n\n\n\n\n\n\nme\n\n\n\n\n\n\nNo matching items"
+    "text": "Default\n\n\n\n\n\n\n\nDefault\n\n\nlinear\n\n\n\n\nDefault analysis\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nLog, no outlier\n\n\n\n\n\n\n\nlog\n\n\n\n\nExperiment with different settings\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nMetadata\n\n\n\n\n\n\n\nMetadata\n\n\n\n\nOverview of the various clinical and genetic metadata records across the samples.\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nDefault\n\n\n\n\n\n\n\nDefault\n\n\n\n\nDefault down-stream analysis\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nStringent\n\n\n\n\n\n\n\nDefault\n\n\n\n\nDefault down-stream analysis, but stricter p-value cutoff\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nLog, no outlier\n\n\n\n\n\n\n\nlog\n\n\n\n\nLog transform and remove outlier, but traditional p-value\n\n\n\n\n\n\nme\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Analysis_01__Log__no_outlier_.html",
