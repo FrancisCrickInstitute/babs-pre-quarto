@@ -4,14 +4,13 @@ include project.mk  #Provides analysis parametrisation
 
 
 .PHONY: render
-
 render: $(qmds)  $(staging_dir)/_quarto.yml $(staging_dir)/index.qmd ## Render the whole directory of generated qmds
-	sed  -i 's#^  contents: .*#  contents: [$(subst $(space),$(comma),$(patsubst %,%_*.qmd,$(sections)))]#' $(staging_dir)/index.qmd
+	sed  -i 's#^  contents: .*#  contents: [$(subst $(space),$(comma),$(patsubst $(staging_dir)/%,%,$(qmds)))]#' $(staging_dir)/index.qmd
 	$(QUARTO) render '$(staging_dir)' --output-dir $(RESULTS_DIR) --execute-dir $(CURDIR)
 
 .PHONY: pages
 pages: $(html_reports) ## Generate the renders individually
-	sed  -i 's#^  contents: .*#  contents: [$(subst $(space),$(comma),$(patsubst %,%_*.qmd,$(sections)))]#' $(staging_dir)/index.qmd
+	sed  -i 's#^  contents: .*#  contents: [$(subst $(space),$(comma),$(patsubst $(staging_dir)/%,%,$(qmds)))]#' $(staging_dir)/index.qmd
 	$(QUARTO) render '$(staging_dir)/index.qmd' --output-dir $(RESULTS_DIR) --execute-dir $(CURDIR)
 
 $(html_reports) : $(staging_dir)/$(RESULTS_DIR)/%.html : $(staging_dir)/%.qmd $(staging_dir)/_quarto.yml $(staging_dir)/index.qmd
