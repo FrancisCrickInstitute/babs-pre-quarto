@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "Down-stream_00_Default.html",
+    "href": "Down-stream_00_Default.html",
+    "title": "Default",
+    "section": "",
+    "text": "1 Introduction\nThis has a Down-stream.yml file with three stanzas, so there should be two partner pages to this. I also inherit the global settings from project.mk but there are no Down-stream-specific settings in that file.\nWe’re using the following settings:\n\n\n                              Setting                     Value\nassay                           assay                       raw\nsubset                         subset                      TRUE\nalpha                           alpha                      0.05\ninput_matrix             input_matrix     extdata/firstdata.csv\ninput_feature_meta input_feature_meta extdata/firstmetadata.csv\nplot_formula             plot_formula                ~treatment\nres_dir                       res_dir                   results\nqmd_name                     qmd_name    Down-stream_00_Default"
+  },
+  {
+    "objectID": "Analysis_00_Default.html",
+    "href": "Analysis_00_Default.html",
+    "title": "Default",
+    "section": "",
+    "text": "1 Introduction\nThis has a Analysis.yml file with two stanzas, so there should be a partner page to this. I also inherit the global settings from project.mk and the settings that are universal to all Analysis scripts.\nWe’re using the following settings:\n\n\n                              Setting                     Value\nassay                           assay                       raw\nsubset                         subset                      TRUE\nrow_distance             row_distance                 euclidean\nnclust                         nclust                         4\ninput_matrix             input_matrix     extdata/firstdata.csv\ninput_feature_meta input_feature_meta extdata/firstmetadata.csv\nplot_formula             plot_formula                ~treatment\nres_dir                       res_dir                   results\nqmd_name                     qmd_name       Analysis_00_Default"
+  },
+  {
+    "objectID": "Description.html",
+    "href": "Description.html",
+    "title": "Metadata",
+    "section": "",
+    "text": "1 Introduction\nThis is a stand-alone file with no corresponding yml file so all its parameters will be inherited from the global and section-specific settings in project.mk. Also, there’ll be no injection of metadata, so the title etc needs to be set in the preamble of this file itself.\nWe’re using the following settings:\n\nset.seed(1)\n\nknitr::opts_chunk$set(warning=FALSE, error=FALSE, message=FALSE,\n                      dev=c(\"ragg_png\",\"pdf\"), out.width=\"100%\",\n                      fig.width=14, fig.height=10,\n                      results='asis'\n                      )\n\nif (!isTRUE(getOption('knitr.in.progress'))) {\n  params <- yaml::read_yaml(\"staging/Description.params.yml\")\n} else {\n data.frame(Setting=names(params),\n                Value=unlist(params))\n}\n                          Setting                     Value\ninput_matrix input_matrix extdata/firstdata.csv input_feature_meta input_feature_meta extdata/firstmetadata.csv plot_formula plot_formula ~treatment subset subset TRUE res_dir res_dir results qmd_name qmd_name Description"
+  },
+  {
+    "objectID": "Down-stream_01_Stringent.html",
+    "href": "Down-stream_01_Stringent.html",
+    "title": "Stringent",
+    "section": "",
+    "text": "1 Introduction\nThis has a Down-stream.yml file with three stanzas, so there should be two partner pages to this. I also inherit the global settings from project.mk but there are no Down-stream-specific settings in that file.\nWe’re using the following settings:\n\n\n                              Setting                     Value\nassay                           assay                       raw\nsubset                         subset                      TRUE\nalpha                           alpha                      0.01\ninput_matrix             input_matrix     extdata/firstdata.csv\ninput_feature_meta input_feature_meta extdata/firstmetadata.csv\nplot_formula             plot_formula                ~treatment\nres_dir                       res_dir                   results\nqmd_name                     qmd_name  Down-stream_01_Stringent"
+  },
+  {
+    "objectID": "Down-stream_02__Log__no_outlier_.html",
+    "href": "Down-stream_02__Log__no_outlier_.html",
+    "title": "Log, no outlier",
+    "section": "",
+    "text": "1 Introduction\nThis has a Down-stream.yml file with three stanzas, so there should be two partner pages to this. I also inherit the global settings from project.mk but there are no Down-stream-specific settings in that file.\nWe’re using the following settings:\n\n\n                              Setting                            Value\nassay                           assay                              log\nsubset                         subset                  !is.na(outcome)\nalpha                           alpha                             0.05\ninput_matrix             input_matrix            extdata/firstdata.csv\ninput_feature_meta input_feature_meta        extdata/firstmetadata.csv\nplot_formula             plot_formula                       ~treatment\nres_dir                       res_dir                          results\nqmd_name                     qmd_name Down-stream_02__Log__no_outlier_"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Index of analysis pages",
+    "section": "",
+    "text": "Default\n\n\n\n\n\n\n\nDefault\n\n\nlinear\n\n\n\n\nDefault analysis\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nLog, no outlier\n\n\n\n\n\n\n\nlog\n\n\n\n\nExperiment with different settings\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nDefault\n\n\n\n\n\n\n\nDefault\n\n\n\n\nDefault down-stream analysis\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nStringent\n\n\n\n\n\n\n\nDefault\n\n\n\n\nDefault down-stream analysis, but stricter p-value cutoff\n\n\n\n\n\n\nme\n\n\n\n\n\n\n\n\nLog, no outlier\n\n\n\n\n\n\n\nlog\n\n\n\n\nLog transform and remove outlier, but traditional p-value\n\n\n\n\n\n\nme\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Analysis_01__Log__no_outlier_.html",
+    "href": "Analysis_01__Log__no_outlier_.html",
+    "title": "Log, no outlier",
+    "section": "",
+    "text": "1 Introduction\nThis has a Analysis.yml file with two stanzas, so there should be a partner page to this. I also inherit the global settings from project.mk and the settings that are universal to all Analysis scripts.\nWe’re using the following settings:\n\n\n                              Setting                         Value\nassay                           assay                           log\nsubset                         subset               !is.na(outcome)\nrow_distance             row_distance                     euclidean\nnclust                         nclust                             4\ninput_matrix             input_matrix         extdata/firstdata.csv\ninput_feature_meta input_feature_meta     extdata/firstmetadata.csv\nplot_formula             plot_formula                    ~treatment\nres_dir                       res_dir                       results\nqmd_name                     qmd_name Analysis_01__Log__no_outlier_"
+  }
+]
