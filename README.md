@@ -1,6 +1,6 @@
 ## Pre-processor for parametrised quarto websites
 
-See [here for the renderer](https://franciscrickinstitute.github.io/babs-pre-quarto/)
+See [here for the render](https://franciscrickinstitute.github.io/babs-pre-quarto/)
 of the example that comes with the repository.
 
 I couldn't find a
